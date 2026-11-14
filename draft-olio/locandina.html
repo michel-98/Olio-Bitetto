@@ -33,19 +33,6 @@
       box-shadow: 0 20px 50px rgba(0,0,0,0.2);
       position: relative;
     }
-    .draft {
-      position: absolute;
-      top: 18px;
-      right: -44px;
-      background: #b91c1c;
-      color: #fff;
-      padding: 8px 60px;
-      transform: rotate(35deg);
-      font-weight: 800;
-      letter-spacing: 2px;
-      font-family: "Trebuchet MS", system-ui, sans-serif;
-      z-index: 2;
-    }
     .photo {
       position: relative;
       background: #e8e2cc;
@@ -103,15 +90,6 @@
     }
     .box span { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
     .box em { display: block; margin-top: 4px; font-style: normal; font-family: "Trebuchet MS", system-ui, sans-serif; color: #5b523f; }
-    .deadline {
-      background: linear-gradient(135deg, var(--olive-dark), var(--olive));
-      color: #fffaf0;
-      border-radius: 16px;
-      padding: 14px 16px;
-      font-family: "Trebuchet MS", system-ui, sans-serif;
-      font-size: 1.05rem;
-      margin-bottom: 16px;
-    }
     .contacts {
       border-top: 3px dashed #dccb8a;
       padding-top: 14px;
@@ -137,16 +115,8 @@
       border-radius: 16px;
       padding: 12px 14px;
     }
-    .qr-block img { background: #fff; padding: 6px; border-radius: 10px; flex: 0 0 auto; }
-    .qr-text strong { display: block; color: var(--olive-dark); font-size: 1.05rem; margin-bottom: 4px; }
-    .qr-text p { margin: 0 0 6px; font-size: 0.95rem; font-weight: 500; color: #3f3a2d; }
-    .qr-text .qr-note { font-size: 0.82rem; color: #6b624a; margin: 0; font-style: italic; }
-    @media (max-width: 700px) {
-      .content { padding: 20px; }
-      .info-grid { grid-template-columns: 1fr; }
-      .photo img { max-height: 420px; }
-      .contacts-main { flex-direction: column; }
-    }
+    .qr-block img.qr-img { background: #fff; padding: 6px; border-radius: 10px; flex: 0 0 auto; }
+    .qr-text p { margin: 0; font-size: 0.98rem; font-weight: 600; color: var(--olive-dark); }
     @media print {
       body { background: white; padding: 0; }
       .poster { box-shadow: none; border-radius: 0; width: 100%; }
@@ -155,29 +125,30 @@
       .content { padding: 20px; }
       .info-grid { grid-template-columns: 1fr; }
       .photo img { max-height: 420px; }
+      .contacts-main { flex-direction: column; }
     }
   </style>
 </head>
 <body>
   <article class="poster">
     <div class="photo">
-      <img src="Locandina.jpg" alt="Mon frÃ¨re et moi pendant la rÃ©colte des olives" />
-      <div class="caption">Voici mon frÃ¨re et moi.</div>
+      <img src="Locandina.jpg" alt="Mon frère et moi pendant la récolte des olives" />
+      <div class="caption">Voici mon frère et moi.</div>
     </div>
     <div class="content">
-      <h1>Huile d'olive extra vierge de Bitetto (BA) ????</h1>
+      <h1>Huile d'olive extra vierge de Bitetto (BA) <img src="flag-it.svg" alt="Italia" class="flag-it"></h1>
       <section class="story">
-        <p class="hello">Salut, c'est moi l'annÃ©e derniÃ¨re, en train de rÃ©colter les olives.</p>
-        <p>Ce sont les olives de ma terre, <strong>Bitetto (BA) ????</strong>, d'oÃ¹ vient notre dÃ©licieuse huile d'olive extra vierge.</p>
-        <p>Cette annÃ©e, nous en aurons un peu plus, alors j'ai dÃ©cidÃ© d'essayer de la vendre aussi ici, en Suisse.</p>
-        <p>J'aurai <strong>50 litres</strong> Ã  vendre, rÃ©partis en bidons de <strong>3 L</strong> ou <strong>5 L</strong>. <strong>Faites-moi savoir...</strong></p>
+        <p class="hello">Salut, c'est moi l'année dernière, en train de récolter les olives.</p>
+        <p>Ce sont les olives de ma terre, <strong>Bitetto (BA) <img src="flag-it.svg" alt="Italia" class="flag-it"></strong>, d'où vient notre délicieuse huile d'olive extra vierge.</p>
+        <p>Cette année, nous en aurons un peu plus, alors j'ai décidé d'essayer de la vendre aussi ici, en Suisse.</p>
+        <p>J'aurai <strong>50 litres</strong> à vendre, répartis en bidons de <strong>3 L</strong> ou <strong>5 L</strong>. <strong>Faites-moi savoir...</strong></p>
       </section>
 
       <section class="info-grid" aria-label="Informations">
         <div class="box">
           <strong>Prix</strong>
           <span>20 CHF / litre</span>
-          <em>3L = 60 CHF Â· 5L = 100 CHF</em>
+          <em>3L = 60 CHF · 5L = 100 CHF</em>
         </div>
         <div class="box">
           <strong>Formats</strong>
@@ -190,12 +161,12 @@
         <h2>Contacts pour commander</h2>
         <div class="contacts-main">
           <div class="rows">
-            <div>ðŸ’¬ WhatsApp : <a href="https://wa.me/41768416840" target="_blank" rel="noopener">076 841 68 40</a></div>
-            <div>ðŸ“ž TÃ©lÃ©phone : <a href="tel:+41768416840">076 841 68 40</a></div>
-            <div>âœ‰ï¸ Email : <a href="mailto:Michele.antonacci1098@gmail.com">Michele.antonacci1098@gmail.com</a></div>
+            <div>💬 WhatsApp : <a href="https://wa.me/41768416840" target="_blank" rel="noopener">076 841 68 40</a></div>
+            <div>📞 Téléphone : <a href="tel:+41768416840">076 841 68 40</a></div>
+            <div>✉️ Email : <a href="mailto:Michele.antonacci1098@gmail.com">Michele.antonacci1098@gmail.com</a></div>
           </div>
           <div class="qr-block">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fmichel-98.github.io%2FOlio-Bitetto%2F" alt="QR code vers le site" width="140" height="140" />
+            <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fmichel-98.github.io%2FOlio-Bitetto%2F" alt="QR code vers le site" width="140" height="140" />
             <div class="qr-text">
               <p>Pour d'autres langues</p>
             </div>

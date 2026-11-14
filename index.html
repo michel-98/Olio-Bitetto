@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Huile d'olive de Bitetto</title>
-  <meta name="description" content="Huile d'olive extra vierge de Bitetto (BA) ???? - 20 CHF/litre, boÃ®tes de 3L ou 5L. Commandes jusqu'au 20 dÃ©cembre." />
+  <meta name="description" content="Huile d'olive extra vierge de Bitetto (BA) - 20 CHF/litre, bidons de 3L ou 5L." />
   <style>
     :root {
       --olive: #5f6f3a;
@@ -33,19 +33,6 @@
       overflow: hidden;
       box-shadow: 0 20px 50px rgba(0,0,0,0.2);
       position: relative;
-    }
-    .draft {
-      position: absolute;
-      top: 18px;
-      right: -44px;
-      background: #b91c1c;
-      color: #fff;
-      padding: 8px 60px;
-      transform: rotate(35deg);
-      font-weight: 800;
-      letter-spacing: 2px;
-      font-family: "Trebuchet MS", system-ui, sans-serif;
-      z-index: 2;
     }
     .lang-bar {
       display: flex;
@@ -123,44 +110,15 @@
     }
     .box span { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
     .box em { display: block; margin-top: 4px; font-style: normal; font-family: "Trebuchet MS", system-ui, sans-serif; color: #5b523f; }
-    .deadline {
-      background: linear-gradient(135deg, var(--olive-dark), var(--olive));
-      color: #fffaf0;
-      border-radius: 16px;
-      padding: 14px 16px;
-      font-family: "Trebuchet MS", system-ui, sans-serif;
-      font-size: 1.05rem;
-      margin-bottom: 16px;
-    }
     .contacts {
       border-top: 3px dashed #dccb8a;
       padding-top: 14px;
       font-family: "Trebuchet MS", system-ui, sans-serif;
     }
     .contacts h2 { margin: 0 0 8px; color: var(--olive-dark); font-size: 1.25rem; }
-    .contacts-main {
-      display: flex;
-      gap: 16px;
-      align-items: stretch;
-      flex-wrap: wrap;
-    }
-    .contacts .rows { display: grid; gap: 8px; font-size: 1.08rem; font-weight: 600; flex: 1 1 260px; align-content: start; }
+    .contacts .rows { display: grid; gap: 8px; font-size: 1.08rem; font-weight: 600; }
     .contacts a { color: var(--olive-dark); text-decoration: none; }
     .contacts a:hover { text-decoration: underline; }
-    .qr-block {
-      flex: 0 1 320px;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      background: #f6efda;
-      border: 2px solid #e4d5a3;
-      border-radius: 16px;
-      padding: 12px 14px;
-    }
-    .qr-block img { background: #fff; padding: 6px; border-radius: 10px; flex: 0 0 auto; }
-    .qr-text strong { display: block; color: var(--olive-dark); font-size: 1.05rem; margin-bottom: 4px; }
-    .qr-text p { margin: 0 0 6px; font-size: 0.95rem; font-weight: 500; color: #3f3a2d; }
-    .qr-text .qr-note { font-size: 0.82rem; color: #6b624a; margin: 0; font-style: italic; }
     @media print {
       body { background: white; padding: 0; }
       .poster { box-shadow: none; border-radius: 0; width: 100%; }
@@ -170,21 +128,20 @@
       .content { padding: 20px; }
       .info-grid { grid-template-columns: 1fr; }
       .photo img { max-height: 420px; }
-      .contacts-main { flex-direction: column; }
     }
   </style>
 </head>
 <body>
   <article class="poster">
     <nav class="lang-bar" aria-label="Langues / Languages">
-      <button type="button" data-lang="fr" class="active">FranÃ§ais</button>
+      <button type="button" data-lang="fr" class="active">Français</button>
       <button type="button" data-lang="it">Italiano</button>
       <button type="button" data-lang="de">Deutsch</button>
       <button type="button" data-lang="en">English</button>
     </nav>
 
     <div class="photo">
-      <img src="Locandina.jpg" alt="RÃ©colte des olives" id="photo-alt" />
+      <img src="Locandina.jpg" alt="Récolte des olives" id="photo-alt" />
       <div class="caption" id="caption"></div>
     </div>
     <div class="content">
@@ -195,7 +152,7 @@
         <div class="box">
           <strong id="price-label"></strong>
           <span>20 CHF / <span id="liter-word"></span></span>
-          <em>3L = 60 CHF Â· 5L = 100 CHF</em>
+          <em>3L = 60 CHF · 5L = 100 CHF</em>
         </div>
         <div class="box">
           <strong id="formats-label"></strong>
@@ -207,62 +164,61 @@
       <section class="contacts">
         <h2 id="contacts-title"></h2>
         <div class="rows">
-          <div>ðŸ’¬ WhatsApp: <a href="https://wa.me/41768416840" target="_blank" rel="noopener">076 841 68 40</a></div>
-          <div>ðŸ“ž <span id="phone-label"></span>: <a href="tel:+41768416840">076 841 68 40</a></div>
-          <div>âœ‰ï¸ Email: <a href="mailto:Michele.antonacci1098@gmail.com">Michele.antonacci1098@gmail.com</a></div>
+          <div>💬 WhatsApp: <a href="https://wa.me/41768416840" target="_blank" rel="noopener">076 841 68 40</a></div>
+          <div>📞 <span id="phone-label"></span>: <a href="tel:+41768416840">076 841 68 40</a></div>
+          <div>✉️ Email: <a href="mailto:Michele.antonacci1098@gmail.com">Michele.antonacci1098@gmail.com</a></div>
         </div>
       </section>
     </div>
   </article>
 
   <script>
+    const flag = '<img src="flag-it.svg" alt="Italia" class="flag-it">';
     const content = {
       fr: {
         pageTitle: "Huile d'olive de Bitetto",
-        photoAlt: "Mon frÃ¨re et moi pendant la rÃ©colte des olives",
-        caption: "Voici mon frÃ¨re et moi.",
-        title: "Huile d'olive extra vierge de Bitetto (BA) ????",
+        photoAlt: "Mon frère et moi pendant la récolte des olives",
+        caption: "Voici mon frère et moi.",
+        title: `Huile d'olive extra vierge de Bitetto (BA) ${flag}`,
         story: [
-          { text: "Salut, c'est moi l'annÃ©e derniÃ¨re, en train de rÃ©colter les olives.", hello: true },
-          { text: "Ce sont les olives de ma terre, <strong>Bitetto (BA) ????</strong>, d'oÃ¹ vient notre dÃ©licieuse huile d'olive extra vierge." },
-          { text: "Cette annÃ©e, nous en aurons un peu plus, alors j'ai dÃ©cidÃ© d'essayer de la vendre aussi ici, en Suisse." },
-          { text: "J'aurai <strong>50 litres</strong> Ã  vendre, rÃ©partis en bidons de <strong>3 L</strong> ou <strong>5 L</strong>. <strong>Faites-moi savoir...</strong>" }
+          { text: "Salut, c'est moi l'année dernière, en train de récolter les olives.", hello: true },
+          { text: `Ce sont les olives de ma terre, <strong>Bitetto (BA) ${flag}</strong>, d'où vient notre délicieuse huile d'olive extra vierge.` },
+          { text: "Cette année, nous en aurons un peu plus, alors j'ai décidé d'essayer de la vendre aussi ici, en Suisse." },
+          { text: "J'aurai <strong>50 litres</strong> à vendre, répartis en bidons de <strong>3 L</strong> ou <strong>5 L</strong>. <strong>Faites-moi savoir...</strong>" }
         ],
         priceLabel: "Prix",
         literWord: "litre",
         formatsLabel: "Formats",
         tinsWord: "Bidons",
         contactsTitle: "Contacts pour commander",
-        phoneLabel: "TÃ©lÃ©phone",
-        qrLabel: "Pour d'autres langues"
+        phoneLabel: "Téléphone"
       },
       it: {
         pageTitle: "Olio d'oliva di Bitetto",
         photoAlt: "Io e mio fratello mentre raccogliamo le olive",
         caption: "Questi siamo io e mio fratello.",
-        title: "Olio extravergine di Bitetto (BA) ????",
+        title: `Olio extravergine di Bitetto (BA) ${flag}`,
         story: [
           { text: "Ciao, questo sono io l'anno scorso, mentre raccolgo le olive.", hello: true },
-          { text: "Queste sono le olive della mia terra, <strong>Bitetto (BA) ????</strong>, da dove produciamo un olio extravergine di oliva buonissimo." },
-          { text: "Quest'anno ne avremo un po' di piÃ¹ e allora ho deciso di provare a venderlo anche qui in Svizzera." },
-          { text: "AvrÃ² <strong>50 litri</strong> da vendere, divisi in lattine da <strong>3L</strong> o <strong>5L</strong> l'una. <strong>Fatemi sapere...</strong>" }
+          { text: `Queste sono le olive della mia terra, <strong>Bitetto (BA) ${flag}</strong>, da dove produciamo un olio extravergine di oliva buonissimo.` },
+          { text: "Quest'anno ne avremo un po' di più e allora ho deciso di provare a venderlo anche qui in Svizzera." },
+          { text: "Avrò <strong>50 litri</strong> da vendere, divisi in lattine da <strong>3L</strong> o <strong>5L</strong> l'una. <strong>Fatemi sapere...</strong>" }
         ],
         priceLabel: "Prezzo",
         literWord: "litro",
         formatsLabel: "Formati",
         tinsWord: "Lattine",
         contactsTitle: "Contatti per ordinare",
-        phoneLabel: "Telefono",
-        qrLabel: "Per altre lingue"
+        phoneLabel: "Telefono"
       },
       de: {
-        pageTitle: "OlivenÃ¶l aus Bitetto",
+        pageTitle: "Olivenöl aus Bitetto",
         photoAlt: "Mein Bruder und ich bei der Olivenernte",
         caption: "Das sind mein Bruder und ich.",
-        title: "Natives OlivenÃ¶l extra aus Bitetto (BA) ????",
+        title: `Natives Olivenöl extra aus Bitetto (BA) ${flag}`,
         story: [
           { text: "Hallo, das bin ich letztes Jahr bei der Olivenernte.", hello: true },
-          { text: "Das sind die Oliven meiner Heimat, <strong>Bitetto (BA) ????</strong>, wo wir ein sehr gutes natives OlivenÃ¶l extra herstellen." },
+          { text: `Das sind die Oliven meiner Heimat, <strong>Bitetto (BA) ${flag}</strong>, wo wir ein sehr gutes natives Olivenöl extra herstellen.` },
           { text: "Dieses Jahr haben wir etwas mehr, und deshalb habe ich beschlossen, es auch hier in der Schweiz zu verkaufen." },
           { text: "Ich werde <strong>50 Liter</strong> verkaufen, aufgeteilt in Kanister zu <strong>3 L</strong> oder <strong>5 L</strong>. <strong>Gebt mir Bescheid...</strong>" }
         ],
@@ -270,18 +226,17 @@
         literWord: "Liter",
         formatsLabel: "Formate",
         tinsWord: "Kanister",
-        contactsTitle: "Kontakt fÃ¼r Bestellungen",
-        phoneLabel: "Telefon",
-        qrLabel: "FÃ¼r andere Sprachen"
+        contactsTitle: "Kontakt für Bestellungen",
+        phoneLabel: "Telefon"
       },
       en: {
         pageTitle: "Olive Oil from Bitetto",
         photoAlt: "My brother and I harvesting olives",
         caption: "This is my brother and me.",
-        title: "Extra Virgin Olive Oil from Bitetto (BA) ????",
+        title: `Extra Virgin Olive Oil from Bitetto (BA) ${flag}`,
         story: [
           { text: "Hi, this is me last year, harvesting olives.", hello: true },
-          { text: "These are the olives from my hometown, <strong>Bitetto (BA) ????</strong>, where we produce a truly delicious extra virgin olive oil." },
+          { text: `These are the olives from my hometown, <strong>Bitetto (BA) ${flag}</strong>, where we produce a truly delicious extra virgin olive oil.` },
           { text: "This year we'll have a bit more, so I decided to try selling it here in Switzerland as well." },
           { text: "I will have <strong>50 liters</strong> for sale, divided into <strong>3L</strong> or <strong>5L</strong> tins. <strong>Let me know...</strong>" }
         ],
@@ -290,8 +245,7 @@
         formatsLabel: "Sizes",
         tinsWord: "Tins",
         contactsTitle: "Contact to order",
-        phoneLabel: "Phone",
-        qrLabel: "For other languages"
+        phoneLabel: "Phone"
       }
     };
 
@@ -301,7 +255,7 @@
       document.title = c.pageTitle;
       document.getElementById('photo-alt').alt = c.photoAlt;
       document.getElementById('caption').textContent = c.caption;
-      document.getElementById('title').textContent = c.title;
+      document.getElementById('title').innerHTML = c.title;
       document.getElementById('story').innerHTML = c.story.map(p =>
         `<p class="${p.hello ? 'hello' : ''}">${p.text}</p>`
       ).join('');
