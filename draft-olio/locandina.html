@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Locandina - Olio di Bitetto</title>
+  <style>
+    :root {
+      --olive: #5f6f3a;
+      --olive-dark: #32401a;
+      --gold: #e6c35c;
+      --cream: #fbf6e8;
+      --paper: #fffdf7;
+      --text: #2f2a1f;
+      --accent: #b45309;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #d9d2ba;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      padding: 24px;
+      display: grid;
+      place-items: center;
+    }
+    .poster {
+      width: min(900px, 100%);
+      background: var(--paper);
+      border: 12px solid var(--olive-dark);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .draft {
+      position: absolute;
+      top: 18px;
+      right: -44px;
+      background: #b91c1c;
+      color: #fff;
+      padding: 8px 60px;
+      transform: rotate(35deg);
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-family: "Trebuchet MS", system-ui, sans-serif;
+      z-index: 2;
+    }
+    .photo {
+      position: relative;
+      background: #e8e2cc;
+    }
+    .photo img {
+      width: 100%;
+      display: block;
+      max-height: 620px;
+      object-fit: cover;
+      object-position: center;
+    }
+    .caption {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      background: rgba(50, 64, 26, 0.82);
+      color: #fffaf0;
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-family: "Trebuchet MS", system-ui, sans-serif;
+      font-size: 1rem;
+      max-width: calc(100% - 36px);
+    }
+    .content { padding: 26px 28px 30px; }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4.8vw, 3.2rem);
+      color: var(--olive-dark);
+      line-height: 1.1;
+    }
+    .story p { margin: 0 0 0.85rem; font-size: 1.12rem; line-height: 1.55; }
+    .story p:last-child { margin-bottom: 0; }
+    .hello { font-size: 1.28rem; font-weight: 700; color: var(--olive-dark); }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+    .box {
+      background: #f6efda;
+      border: 2px solid #e4d5a3;
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+    .box strong {
+      display: block;
+      font-family: "Trebuchet MS", system-ui, sans-serif;
+      color: var(--olive-dark);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+    .box span { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+    .box em { display: block; margin-top: 4px; font-style: normal; font-family: "Trebuchet MS", system-ui, sans-serif; color: #5b523f; }
+    .deadline {
+      background: linear-gradient(135deg, var(--olive-dark), var(--olive));
+      color: #fffaf0;
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-family: "Trebuchet MS", system-ui, sans-serif;
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+    }
+    .contacts {
+      border-top: 3px dashed #dccb8a;
+      padding-top: 14px;
+      font-family: "Trebuchet MS", system-ui, sans-serif;
+    }
+    .contacts h2 { margin: 0 0 8px; color: var(--olive-dark); font-size: 1.25rem; }
+    .contacts-main {
+      display: flex;
+      gap: 16px;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+    .contacts .rows { display: grid; gap: 8px; font-size: 1.08rem; font-weight: 600; flex: 1 1 260px; align-content: start; }
+    .contacts .rows a { color: var(--olive-dark); text-decoration: none; }
+    .contacts .rows a:hover { text-decoration: underline; }
+    .qr-block {
+      flex: 0 1 320px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: #f6efda;
+      border: 2px solid #e4d5a3;
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+    .qr-block img { background: #fff; padding: 6px; border-radius: 10px; flex: 0 0 auto; }
+    .qr-text strong { display: block; color: var(--olive-dark); font-size: 1.05rem; margin-bottom: 4px; }
+    .qr-text p { margin: 0 0 6px; font-size: 0.95rem; font-weight: 500; color: #3f3a2d; }
+    .qr-text .qr-note { font-size: 0.82rem; color: #6b624a; margin: 0; font-style: italic; }
+    @media (max-width: 700px) {
+      .content { padding: 20px; }
+      .info-grid { grid-template-columns: 1fr; }
+      .photo img { max-height: 420px; }
+      .contacts-main { flex-direction: column; }
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .poster { box-shadow: none; border-radius: 0; width: 100%; }
+    }
+    @media (max-width: 700px) {
+      .content { padding: 20px; }
+      .info-grid { grid-template-columns: 1fr; }
+      .photo img { max-height: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <article class="poster">
+    <div class="draft">BOZZA</div>
+    <div class="photo">
+      <img src="Locandina.jpg" alt="Io e mio fratello mentre raccogliamo le olive" />
+      <div class="caption">Questi siamo io e mio fratello.</div>
+    </div>
+    <div class="content">
+      <h1>Olio extravergine di Bitetto (BA)</h1>
+      <section class="story">
+        <p class="hello">Ciao, questo sono io l'anno scorso, mentre raccolgo le olive.</p>
+        <p>Queste sono le olive della mia terra, <strong>Bitetto (BA)</strong>, da dove produciamo un olio extravergine di oliva buonissimo.</p>
+        <p>Quest'anno ne avremo un po' di più e allora ho deciso di provare a venderlo anche qui in Svizzera.</p>
+        <p>Avrò <strong>50 litri</strong> da vendere, divisi in lattine da <strong>3L</strong> o <strong>5L</strong> l'una. <strong>Fatemi sapere...</strong></p>
+      </section>
+
+      <section class="info-grid" aria-label="Informazioni">
+        <div class="box">
+          <strong>Prezzo</strong>
+          <span>20 CHF / litro</span>
+          <em>3L = 60 CHF · 5L = 100 CHF</em>
+        </div>
+        <div class="box">
+          <strong>Formati</strong>
+          <span>3L o 5L</span>
+          <em>Lattine</em>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2>Contatti per ordinare</h2>
+        <div class="contacts-main">
+          <div class="rows">
+            <div>💬 WhatsApp: <a href="https://wa.me/41768416840" target="_blank" rel="noopener">076 841 68 40</a></div>
+            <div>📞 Telefono: <a href="tel:+41768416840">076 841 68 40</a></div>
+            <div>✉️ Email: <a href="mailto:Michele.antonacci1098@gmail.com">Michele.antonacci1098@gmail.com</a></div>
+          </div>
+          <div class="qr-block">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2FINSERISCI-URL-GITHUB-PAGES" alt="QR code per il sito (placeholder)" width="140" height="140" />
+            <div class="qr-text">
+              <p>Per altre lingue</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
+</body>
+</html>
